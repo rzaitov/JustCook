@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustCook", "JustCook.csproj", "{F008F347-0D2B-4605-95D3-00972EC764A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Release|iPhone.Build.0 = Release|iPhone
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F008F347-0D2B-4605-95D3-00972EC764A8}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = JustCook.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.TabsToSpaces = False
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.BeforeMethodCallParentheses = False
+		$3.BeforeConstructorDeclarationParentheses = False
+		$3.BeforeIndexerDeclarationBracket = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
