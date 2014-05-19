@@ -103,4 +103,10 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Bindings\vk\src\VkSdk.csproj">
+      <Project>{73FEE479-A0DF-4B72-9323-92671D6634C0}</Project>
+      <Name>VkSdk</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
