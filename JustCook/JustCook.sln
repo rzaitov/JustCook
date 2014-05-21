@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustCook", "JustCook.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkSdk", "..\Bindings\vk\src\VkSdk.csproj", "{73FEE479-A0DF-4B72-9323-92671D6634C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkNet", "..\vknet\VkNet\VkNet.csproj", "{8B031A92-84D4-4418-8551-18F1AFEECC6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -27,6 +29,18 @@ Global
 		{73FEE479-A0DF-4B72-9323-92671D6634C0}.Release|iPhone.Build.0 = Release|Any CPU
 		{73FEE479-A0DF-4B72-9323-92671D6634C0}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{73FEE479-A0DF-4B72-9323-92671D6634C0}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhone.Build.0 = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.AppStore|iPhone.ActiveCfg = AppStore|iPhone

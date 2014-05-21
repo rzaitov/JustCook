@@ -109,5 +109,9 @@
       <Project>{73FEE479-A0DF-4B72-9323-92671D6634C0}</Project>
       <Name>VkSdk</Name>
     </ProjectReference>
+    <ProjectReference Include="..\vknet\VkNet\VkNet.csproj">
+      <Project>{8B031A92-84D4-4418-8551-18F1AFEECC6C}</Project>
+      <Name>VkNet</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

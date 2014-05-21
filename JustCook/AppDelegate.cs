@@ -24,6 +24,10 @@ namespace JustCook
 			VKSdk.InitializeWithDelegate(_vkDelegate, "4370991");
 
 			_vkApi = new VKApi ();
+			var vkapi = new VkNet.VkApi ();
+			int totalCount;
+
+			var posts = vkapi.Wall.Get(-32509740, out totalCount, 10, 0);
 
 			window.MakeKeyAndVisible();
 

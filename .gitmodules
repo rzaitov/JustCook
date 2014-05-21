@@ -1,3 +1,6 @@
 [submodule "Bindings"]
 	path = Bindings
 	url = git@github.com:rzaitov/MonotouchBindings.git
+[submodule "vknet"]
+	path = vknet
+	url = git@github.com:vknet/vk.git
