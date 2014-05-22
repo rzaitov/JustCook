@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkSdk", "..\Bindings\vk\src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkNet", "..\vknet\VkNet\VkNet.csproj", "{8B031A92-84D4-4418-8551-18F1AFEECC6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -41,6 +43,18 @@ Global
 		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhone.Build.0 = Release|Any CPU
 		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{8B031A92-84D4-4418-8551-18F1AFEECC6C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Release|iPhone.Build.0 = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
 		{F008F347-0D2B-4605-95D3-00972EC764A8}.AppStore|iPhone.ActiveCfg = AppStore|iPhone

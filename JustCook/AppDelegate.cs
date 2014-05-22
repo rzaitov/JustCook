@@ -4,8 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-
-using VK;
+using Logic;
 
 namespace JustCook
 {
@@ -13,21 +12,20 @@ namespace JustCook
 	public partial class AppDelegate : UIApplicationDelegate
 	{
 		private UIWindow window;
-		private VkDelegate _vkDelegate;
-		VKApi _vkApi;
+//		private VkDelegate _vkDelegate;
+		private VkService _vkService;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-			_vkDelegate = new VkDelegate ();
-			VKSdk.InitializeWithDelegate(_vkDelegate, "4370991");
 
-			_vkApi = new VKApi ();
-			var vkapi = new VkNet.VkApi ();
-			int totalCount;
+			_vkService = new VkService ();
+			_vkService.GetWall().ContinueWith(rT => {
+				IList<Post> result = rT.Result;
 
-			var posts = vkapi.Wall.Get(-32509740, out totalCount, 10, 0);
+				int i = 25;
+			});
 
 			window.MakeKeyAndVisible();
 

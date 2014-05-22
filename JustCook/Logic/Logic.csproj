@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Logic</RootNamespace>
+    <AssemblyName>Logic</AssemblyName>
+    <TargetFrameworkProfile>Profile136</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VkService.cs" />
+    <Compile Include="Model\Post.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Comments.cs" />
+    <Compile Include="Model\Geo.cs" />
+    <Compile Include="Model\Attachments\Album.cs" />
+    <Compile Include="Model\Attachments\ApplicationContent.cs" />
+    <Compile Include="Model\Attachments\Attachment.cs" />
+    <Compile Include="Model\Attachments\Audio.cs" />
+    <Compile Include="Model\Attachments\Document.cs" />
+    <Compile Include="Model\Attachments\Graffiti.cs" />
+    <Compile Include="Model\Attachments\Link.cs" />
+    <Compile Include="Model\Attachments\MediaAttachment.cs" />
+    <Compile Include="Model\Attachments\Note.cs" />
+    <Compile Include="Model\Attachments\Page.cs" />
+    <Compile Include="Model\Attachments\Photo.cs" />
+    <Compile Include="Model\Attachments\Poll.cs" />
+    <Compile Include="Model\Attachments\Video.cs" />
+    <Compile Include="Model\Likes.cs" />
+    <Compile Include="Model\PostSource.cs" />
+    <Compile Include="Model\Reposts.cs" />
+    <Compile Include="Model\Coordinates.cs" />
+    <Compile Include="Model\Place.cs" />
+    <Compile Include="Enums\AddFriendStatus.cs" />
+    <Compile Include="Enums\AdminLevel.cs" />
+    <Compile Include="Enums\Attitude.cs" />
+    <Compile Include="Enums\AudioGenre.cs" />
+    <Compile Include="Enums\AudioSort.cs" />
+    <Compile Include="Enums\BanReason.cs" />
+    <Compile Include="Enums\BirthdayVisibility.cs" />
+    <Compile Include="Enums\ChangeNameStatus.cs" />
+    <Compile Include="Enums\DeleteFriendStatus.cs" />
+    <Compile Include="Enums\FriendStatus.cs" />
+    <Compile Include="Enums\GroupPublicity.cs" />
+    <Compile Include="Enums\LifeMain.cs" />
+    <Compile Include="Enums\MessageReadState.cs" />
+    <Compile Include="Enums\MessageType.cs" />
+    <Compile Include="Enums\MessagesFilter.cs" />
+    <Compile Include="Enums\PageAccessKind.cs" />
+    <Compile Include="Enums\PeopleMain.cs" />
+    <Compile Include="Enums\PoliticalPreferences.cs" />
+    <Compile Include="Enums\RelationType.cs" />
+    <Compile Include="Enums\Sex.cs" />
+    <Compile Include="Enums\VideoReportType.cs" />
+    <Compile Include="Enums\VideoSort.cs" />
+    <Compile Include="Enums\VideoWidth.cs" />
+    <Compile Include="Enums\VkObjectType.cs" />
+    <Compile Include="Enums\WallFilter.cs" />
+    <Compile Include="Enums\Filters\CountersFilter.cs" />
+    <Compile Include="Enums\Filters\GroupsFields.cs" />
+    <Compile Include="Enums\Filters\GroupsFilters.cs" />
+    <Compile Include="Enums\Filters\MultivaluedFilter.cs" />
+    <Compile Include="Enums\Filters\ProfileFields.cs" />
+    <Compile Include="Enums\Filters\Settings.cs" />
+    <Compile Include="Enums\Filters\SubscribeFilter.cs" />
+    <Compile Include="Enums\Filters\VideoFilters.cs" />
+    <Compile Include="Enums\SafetyEnums\CommentsSort.cs" />
+    <Compile Include="Enums\SafetyEnums\Display.cs" />
+    <Compile Include="Enums\SafetyEnums\FriendsOrder.cs" />
+    <Compile Include="Enums\SafetyEnums\GroupType.cs" />
+    <Compile Include="Enums\SafetyEnums\GroupsSort.cs" />
+    <Compile Include="Enums\SafetyEnums\LinkAccessType.cs" />
+    <Compile Include="Enums\SafetyEnums\NameCase.cs" />
+    <Compile Include="Enums\SafetyEnums\ReportType.cs" />
+    <Compile Include="Enums\SafetyEnums\SafetyEnum.cs" />
+    <Compile Include="Model\PollAnswer.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="VkJsonResponse.cs" />
+    <Compile Include="PostResponse.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Model\Attachments\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+</Project>
