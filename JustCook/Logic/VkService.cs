@@ -28,13 +28,13 @@ namespace Logic
 				HttpResponseMessage responce = rTask.Result;
 				responce.EnsureSuccessStatusCode();
 
-				var strData = responce.Content.ReadAsStringAsync().Result;
-				var postRootObject = JsonConvert.DeserializeObject<VkRootObject<Post>>(strData);
-				var result = postRootObject.response.items;
+				return responce.Content.ReadAsStringAsync().ContinueWith(t => {
+					var postRootObject = JsonConvert.DeserializeObject<VkRootObject<Post>>(t.Result);
+					var result = postRootObject.response.items;
+					return (IList<Post>)result;
+				});
 
-				return (IList<Post>)result;
-			});
-
+			}).Unwrap();
 		}
 	}
 }
