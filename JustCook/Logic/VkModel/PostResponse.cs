@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Logic.VkResponse
+namespace Logic.Vk
 {
 	public class Photo
 	{

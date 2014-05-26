@@ -37,6 +37,7 @@
     <Compile Include="VkModel\PostResponse.cs" />
     <Compile Include="VkModel\VkRootObject.cs" />
     <Compile Include="VkModel\Response.cs" />
+    <Compile Include="VkRequest\VkRequestParam.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -67,5 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="VkModel\" />
+    <Folder Include="VkRequest\" />
   </ItemGroup>
 </Project>

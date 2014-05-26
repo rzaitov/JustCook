@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Logic;
-using Logic.VkResponse;
+using Logic.Vk;
 
 namespace JustCook
 {
@@ -13,7 +13,6 @@ namespace JustCook
 	public partial class AppDelegate : UIApplicationDelegate
 	{
 		private UIWindow window;
-//		private VkDelegate _vkDelegate;
 		private VkService _vkService;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)

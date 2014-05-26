@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Logic.VkResponse
+namespace Logic.Vk
 {
 	public class VkRootObject<T>
 	{

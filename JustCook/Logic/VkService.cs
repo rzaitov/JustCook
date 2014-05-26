@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Newtonsoft.Json;
-using Logic.VkResponse;
+using Logic.Vk;
 
 namespace Logic
 {
