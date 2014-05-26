@@ -38,6 +38,8 @@
     <Compile Include="VkModel\VkRootObject.cs" />
     <Compile Include="VkModel\Response.cs" />
     <Compile Include="VkRequest\VkRequestParam.cs" />
+    <Compile Include="VkRequest\WallRequest.cs" />
+    <Compile Include="QueryBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

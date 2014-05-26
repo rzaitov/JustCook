@@ -21,7 +21,7 @@ namespace JustCook
 
 
 			_vkService = new VkService ();
-			_vkService.GetWall().ContinueWith(rT => {
+			_vkService.GetWall(-32509740, FilterType.All, 1).ContinueWith(rT => {
 				IList<Post> result = rT.Result;
 
 				int i = 25;

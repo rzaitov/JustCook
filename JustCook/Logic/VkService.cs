@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-
 using Newtonsoft.Json;
+
 using Logic.Vk;
 
 namespace Logic
@@ -15,13 +17,21 @@ namespace Logic
 		public VkService()
 		{
 			_client = new HttpClient ();
-
 		}
 
-		public Task<IList<Post>> GetWall()
+		public Task<IList<Post>> GetWall(int ownerId, string filter, int count)
 		{
-			var wallRequest = "https://api.vk.com/method/wall.get?v=5.21&owner_id=-32509740&filter=owner&count=1";
-			Task<HttpResponseMessage> requestTask = _client.GetAsync(wallRequest);
+			var parameters = new Dictionary<string, string>{
+				{ "v", "5.21" },
+				{ "owner_id", ownerId.ToString() },
+				{ "filter", filter },
+				{ "count", count.ToString() }
+			};
+			string queryStr = QueryBuilder.CreateQueryStringFrom(parameters);
+			UriBuilder builder = new UriBuilder ("https://api.vk.com/method/wall.get");
+			builder.Query = queryStr;
+
+			Task<HttpResponseMessage> requestTask = _client.GetAsync(builder.Uri);
 
 			return requestTask.ContinueWith(rTask => {
 
