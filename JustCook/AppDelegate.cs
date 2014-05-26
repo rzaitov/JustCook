@@ -21,7 +21,13 @@ namespace JustCook
 
 
 			_vkService = new VkService ();
-			_vkService.GetWall(-32509740, FilterType.All, 1).ContinueWith(rT => {
+
+			var param = new WallRequestParam {
+				OwnerId = -32509740,
+				Filter = FilterType.All,
+			};
+
+			_vkService.GetWall(param).ContinueWith(rT => {
 				IList<Post> result = rT.Result;
 
 				int i = 25;

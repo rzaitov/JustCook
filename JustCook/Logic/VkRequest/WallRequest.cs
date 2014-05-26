@@ -1,12 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Logic.Vk
 {
 	public class WallRequestParam : VkRequestParam
 	{
-		public string OwnerId { get; set; }
+		public int OwnerId { get; set; }
 		public string Filter { get; set; }
-		public string Count { get; set; }
+		public int? Count { get; set; }
+		public int? Offset { get; set; }
+
+		protected override void CollectParameters (Dictionary<string, string> nameValues)
+		{
+			base.CollectParameters(nameValues);
+
+			TryCollect("owner_id", OwnerId, nameValues);
+			TryCollect("filter", Filter, nameValues);
+			TryCollect("count", Count, nameValues);
+			TryCollect("offset", Offset, nameValues);
+		}
 	}
 
 	public class FilterType

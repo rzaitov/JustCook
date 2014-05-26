@@ -13,23 +13,20 @@ namespace Logic
 	public class VkService
 	{
 		private readonly HttpClient _client;
+		private readonly string ApiVersion = "5.21";
+		private readonly string WallGetBaseUrl = "https://api.vk.com/method/wall.get";
 
 		public VkService()
 		{
 			_client = new HttpClient ();
 		}
 
-		public Task<IList<Post>> GetWall(int ownerId, string filter, int count)
+		public Task<IList<Post>> GetWall(WallRequestParam param)
 		{
-			var parameters = new Dictionary<string, string>{
-				{ "v", "5.21" },
-				{ "owner_id", ownerId.ToString() },
-				{ "filter", filter },
-				{ "count", count.ToString() }
-			};
-			string queryStr = QueryBuilder.CreateQueryStringFrom(parameters);
-			UriBuilder builder = new UriBuilder ("https://api.vk.com/method/wall.get");
-			builder.Query = queryStr;
+			TrySetApiVersion(param);
+
+			UriBuilder builder = new UriBuilder (WallGetBaseUrl);
+			builder.Query = param.BuildQuery();
 
 			Task<HttpResponseMessage> requestTask = _client.GetAsync(builder.Uri);
 
@@ -45,6 +42,12 @@ namespace Logic
 				});
 
 			}).Unwrap();
+		}
+
+		private void TrySetApiVersion(VkRequestParam param)
+		{
+			if(string.IsNullOrWhiteSpace(param.Version))
+				param.Version = ApiVersion;
 		}
 	}
 }
