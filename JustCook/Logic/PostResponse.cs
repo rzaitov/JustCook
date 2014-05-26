@@ -41,7 +41,7 @@ namespace Logic.VkResponse
 		public int count { get; set; }
 	}
 
-	public class Item
+	public class Post
 	{
 		public int id { get; set; }
 		public int from_id { get; set; }
@@ -58,7 +58,7 @@ namespace Logic.VkResponse
 	public class Response
 	{
 		public int count { get; set; }
-		public List<Item> items { get; set; }
+		public List<Post> items { get; set; }
 	}
 
 	public class PostRootObject
