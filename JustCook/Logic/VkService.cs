@@ -29,7 +29,8 @@ namespace Logic
 				responce.EnsureSuccessStatusCode();
 
 				var strData = responce.Content.ReadAsStringAsync().Result;
-				var result = JsonConvert.DeserializeObject<PostRootObject>(strData).response.items;
+				var postRootObject = JsonConvert.DeserializeObject<VkRootObject<Post>>(strData);
+				var result = postRootObject.response.items;
 
 				return (IList<Post>)result;
 			});

@@ -54,15 +54,5 @@ namespace Logic.VkResponse
 		public Likes likes { get; set; }
 		public Reposts reposts { get; set; }
 	}
-
-	public class Response
-	{
-		public int count { get; set; }
-		public List<Post> items { get; set; }
-	}
-
-	public class PostRootObject
-	{
-		public Response response { get; set; }
-	}}
+}
 

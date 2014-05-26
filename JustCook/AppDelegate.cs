@@ -5,6 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Logic;
+using Logic.VkResponse;
 
 namespace JustCook
 {
