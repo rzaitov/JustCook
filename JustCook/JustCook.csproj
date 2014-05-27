@@ -101,6 +101,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="VkDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="Logic\Logic.csproj">
+      <Project>{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
