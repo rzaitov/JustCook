@@ -40,6 +40,12 @@
     <Compile Include="VkRequest\VkRequestParam.cs" />
     <Compile Include="VkRequest\WallRequest.cs" />
     <Compile Include="QueryBuilder.cs" />
+    <Compile Include="ImagePacking\ImageContainer.cs" />
+    <Compile Include="Common\SizeF.cs" />
+    <Compile Include="Common\PointF.cs" />
+    <Compile Include="Common\Size.cs" />
+    <Compile Include="Common\Point.cs" />
+    <Compile Include="ImagePacking\RowContainer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -71,5 +77,7 @@
   <ItemGroup>
     <Folder Include="VkModel\" />
     <Folder Include="VkRequest\" />
+    <Folder Include="ImagePacking\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>
