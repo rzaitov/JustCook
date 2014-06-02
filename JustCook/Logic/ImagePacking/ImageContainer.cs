@@ -8,7 +8,7 @@ namespace Logic
 	public abstract class ImageContainer
 	{
 		private readonly List<SizeF> _elements;
-		protected List<SizeF> Elements
+		public List<SizeF> Elements
 		{
 			get { return _elements;}
 		}

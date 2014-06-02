@@ -15,11 +15,13 @@ namespace JustCook
 		private UIWindow window;
 		private VkService _vkService;
 
+		private TestViewController _controller;
+
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-
+			/*
 			_vkService = new VkService ();
 
 			var param = new WallRequestParam {
@@ -32,6 +34,10 @@ namespace JustCook
 
 				int i = 25;
 			});
+			*/
+
+			_controller = new TestViewController ();
+			window.RootViewController = _controller;
 
 			window.MakeKeyAndVisible();
 

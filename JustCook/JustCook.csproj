@@ -93,6 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\TestImages\7TzTt64uC5I.jpg" />
+    <BundleResource Include="Resources\TestImages\8kRuiq5bjfM.jpg" />
+    <BundleResource Include="Resources\TestImages\Co1Z6PbkZ40.jpg" />
+    <BundleResource Include="Resources\TestImages\KXX3VUnNsq8.jpg" />
+    <BundleResource Include="Resources\TestImages\V-DjgYm2dm0.jpg" />
+    <BundleResource Include="Resources\TestImages\_7E5pLvSWQc.jpg" />
+    <BundleResource Include="Resources\TestImages\m-mfbOYoMao.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -102,6 +109,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="VkDelegate.cs" />
+    <Compile Include="Screens\TestScreen\TestViewController.cs" />
+    <Compile Include="DrawingHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -109,5 +118,10 @@
       <Project>{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}</Project>
       <Name>Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\TestImages\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Screens\TestScreen\" />
   </ItemGroup>
 </Project>
