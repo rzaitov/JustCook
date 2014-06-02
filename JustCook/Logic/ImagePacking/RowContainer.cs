@@ -31,7 +31,7 @@ namespace Logic
 				for (int i = 0; i < Elements.Count; i++)
 				{
 					SizeF size = Elements[i];
-					var scaledSize = new SizeF(_height, ratio * size.Width);
+					var scaledSize = new SizeF(ratio * size.Width, _height);
 					Elements[i] = scaledSize;
 				}
 
@@ -56,7 +56,7 @@ namespace Logic
 				{
 					SizeF size = Elements[i];
 					float ratio = _height / size.Height;
-					var scaledSize = new SizeF(_height, ratio * size.Width);
+					var scaledSize = new SizeF(ratio * size.Width, _height);
 
 					Elements[i] = scaledSize;
 					_width += scaledSize.Width;
