@@ -25,17 +25,15 @@ namespace Logic
 					Height = 100f;
 
 				float ratio = value / _width;
+				_width = value;
 				_height *= ratio;
 
-				// scale here
 				for (int i = 0; i < Elements.Count; i++)
 				{
 					SizeF size = Elements[i];
 					var scaledSize = new SizeF(ratio * size.Width, _height);
 					Elements[i] = scaledSize;
 				}
-
-				_width = value;
 			}
 		}
 

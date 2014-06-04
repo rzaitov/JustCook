@@ -9,7 +9,8 @@ namespace JustCook
 {
 	public class TestViewController : UIViewController
 	{
-		private UIScrollView _scroll;
+		private UIScrollView _hScroll;
+		private UIScrollView _vScroll;
 		private List<UIImageView> _images;
 
 		public TestViewController()
@@ -21,10 +22,14 @@ namespace JustCook
 		{
 			base.ViewDidLoad();
 
-			_scroll = new UIScrollView ();
-			_scroll.BackgroundColor = UIColor.Cyan;
+			_hScroll = new UIScrollView ();
+			_vScroll = new UIScrollView ();
 
-			View.AddSubview(_scroll);
+			_hScroll.BackgroundColor = UIColor.Cyan;
+			_vScroll.BackgroundColor = UIColor.Cyan;
+
+//			View.AddSubview(_hScroll);
+			View.AddSubview(_vScroll);
 			View.BackgroundColor = UIColor.White;
 
 			LoadImages();
@@ -35,32 +40,46 @@ namespace JustCook
 			_images.Clear();
 			List<UIImage> imgs = new List<UIImage> ();
 			RowContainer rc = new RowContainer();
+			ColumnContainer cc = new ColumnContainer ();
 
 			foreach (var path in ImgPaths())
 			{
 				UIImage img = UIImage.FromFile(path);
 				imgs.Add(img);
 
-				rc.Add(DrawingHelper.ConvertFrom(img.Size));
+				var size = DrawingHelper.ConvertFrom(img.Size);
+				rc.Add(size);
+				cc.Add(size);
 			}
 
 			//rc.Height = 100f;
 			rc.Width = 320f;
-			PointF location = new PointF ();
+			cc.Height = 450f;
+			PointF rcLocation = PointF.Empty;
+			PointF ccLocation = PointF.Empty;
 			for(int i = 0; i < imgs.Count; i++)
 			{
-				UIImageView imgView = new UIImageView (imgs[i]);
-				_images.Add(imgView);
-				_scroll.AddSubview(imgView);
+				UIImageView imgv1 = new UIImageView (imgs[i]);
+				UIImageView imgv2 = new UIImageView (imgs[i]);
 
-				var size = rc.Elements [i];
-				imgView.Frame = new RectangleF (location, DrawingHelper.ConvertFrom(size));
+				_hScroll.AddSubview(imgv1);
+				_vScroll.AddSubview(imgv2);
 
-				location.X += size.Width;
+				var size1 = rc.Elements [i];
+				var size2 = cc.Elements [i];
+
+				imgv1.Frame = new RectangleF (rcLocation, DrawingHelper.ConvertFrom(size1));
+				imgv2.Frame = new RectangleF (ccLocation, DrawingHelper.ConvertFrom(size2));
+
+				rcLocation.X += size1.Width;
+				ccLocation.Y += size2.Height;
 			}
 
-			_scroll.Frame = new RectangleF(0f, 0f, 320f, 200f);
-			_scroll.ContentSize = new SizeF (rc.Width, rc.Height);
+			_hScroll.Frame = new RectangleF(0f, 0f, 320f, 200f);
+			_vScroll.Frame = new RectangleF (0f, 0f, 200f, 450f);
+
+			_hScroll.ContentSize = new SizeF (rc.Width, rc.Height);
+			_vScroll.ContentSize = new SizeF (cc.Width, cc.Height);
 		}
 
 		public override void ViewWillLayoutSubviews ()
