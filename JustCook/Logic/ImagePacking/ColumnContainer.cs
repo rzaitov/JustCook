@@ -22,12 +22,11 @@ namespace Logic
 
 				for (int i = 0; i < Elements.Count; i++)
 				{
-					SizeF size = Elements [i];
+					ISizeF size = Elements [i];
 					float ratio = _width / size.Width;
-					var scaledSize = new SizeF(_width, size.Height * ratio);
 
-					Elements [i] = scaledSize;
-					_height += scaledSize.Height;
+					size.Height *= ratio;
+					_height += size.Height;
 				}
 
 				IsInitialized = true;
@@ -51,16 +50,8 @@ namespace Logic
 				_width *= ratio;
 
 				for (int i = 0; i < Elements.Count; i++)
-				{
-					SizeF size = Elements [i];
-					var scaledSize = new SizeF(_width, size.Height * ratio);
-					Elements [i] = scaledSize;
-				}
+					Elements[i].Height *= ratio;
 			}
-		}
-
-		public ColumnContainer()
-		{
 		}
 	}
 }

@@ -47,6 +47,8 @@
     <Compile Include="Common\Point.cs" />
     <Compile Include="ImagePacking\RowContainer.cs" />
     <Compile Include="ImagePacking\ColumnContainer.cs" />
+    <Compile Include="ImagePacking\ISizeFactory.cs" />
+    <Compile Include="ImagePacking\ISizeF.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

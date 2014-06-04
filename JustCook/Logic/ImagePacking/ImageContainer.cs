@@ -5,10 +5,11 @@ using Logic.Drawing;
 
 namespace Logic
 {
-	public abstract class ImageContainer
+	public abstract class ImageContainer : ISizeF
 	{
-		private readonly List<SizeF> _elements;
-		public List<SizeF> Elements
+		private readonly List<ISizeF> _elements;
+
+		public List<ISizeF> Elements
 		{
 			get { return _elements;}
 		}
@@ -20,10 +21,10 @@ namespace Logic
 
 		public ImageContainer()
 		{
-			_elements = new List<SizeF> ();
+			_elements = new List<ISizeF> ();
 		}
 
-		public void Add(SizeF size)
+		public void Add(ISizeF size)
 		{
 			_elements.Add(size);
 		}
