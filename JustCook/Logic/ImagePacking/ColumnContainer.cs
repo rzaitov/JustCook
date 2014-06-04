@@ -1,5 +1,4 @@
 ﻿using System;
-using Logic.Drawing;
 
 namespace Logic
 {
@@ -26,6 +25,8 @@ namespace Logic
 					float ratio = _width / size.Width;
 
 					size.Height *= ratio;
+					size.Width = _width;
+
 					_height += size.Height;
 				}
 

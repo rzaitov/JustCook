@@ -41,10 +41,6 @@
     <Compile Include="VkRequest\WallRequest.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="ImagePacking\ImageContainer.cs" />
-    <Compile Include="Common\SizeF.cs" />
-    <Compile Include="Common\PointF.cs" />
-    <Compile Include="Common\Size.cs" />
-    <Compile Include="Common\Point.cs" />
     <Compile Include="ImagePacking\RowContainer.cs" />
     <Compile Include="ImagePacking\ColumnContainer.cs" />
     <Compile Include="ImagePacking\ISizeFactory.cs" />
@@ -81,6 +77,5 @@
     <Folder Include="VkModel\" />
     <Folder Include="VkRequest\" />
     <Folder Include="ImagePacking\" />
-    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

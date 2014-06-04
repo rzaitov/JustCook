@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Logic.Drawing;
-
 namespace Logic
 {
 	public abstract class ImageContainer : ISizeF

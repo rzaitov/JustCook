@@ -47,7 +47,7 @@ namespace JustCook
 				UIImage img = UIImage.FromFile(path);
 				imgs.Add(img);
 
-				var size = DrawingHelper.ConvertFrom(img.Size);
+				var size = new DrawSizeF(img.Size);
 				rc.Add(size);
 				cc.Add(size);
 			}
@@ -68,8 +68,8 @@ namespace JustCook
 				var size1 = rc.Elements [i];
 				var size2 = cc.Elements [i];
 
-				imgv1.Frame = new RectangleF (rcLocation, DrawingHelper.ConvertFrom(size1));
-				imgv2.Frame = new RectangleF (ccLocation, DrawingHelper.ConvertFrom(size2));
+				imgv1.Frame = new RectangleF (rcLocation, DrawSizeF.Convert(size1));
+				imgv2.Frame = new RectangleF (ccLocation, DrawSizeF.Convert(size2));
 
 				rcLocation.X += size1.Width;
 				ccLocation.Y += size2.Height;
