@@ -46,12 +46,9 @@ namespace JustCook
 			{
 				UIImage img = UIImage.FromFile(path);
 				imgs.Add(img);
-
-				var size = new DrawSizeF(img.Size);
-				rc.Add(size);
-				cc.Add(size);
 			}
 
+			/*
 			//rc.Height = 100f;
 			rc.Width = 320f;
 			cc.Height = 450f;
@@ -80,6 +77,32 @@ namespace JustCook
 
 			_hScroll.ContentSize = new SizeF (rc.Width, rc.Height);
 			_vScroll.ContentSize = new SizeF (cc.Width, cc.Height);
+			*/
+
+			var size1 = new DrawSizeF(imgs[0].Size);
+			rc.Add(size1);
+			var size2 = new DrawSizeF(imgs[1].Size);
+			cc.Add(size2);
+			var size3 = new DrawSizeF(imgs[2].Size);
+			cc.Add(size3);
+
+			rc.Add(cc);
+			rc.Height = 120;
+//			rc.Width = 300f;
+
+			UIImageView imgv1 = new UIImageView (imgs[0]);
+			imgv1.Frame = new RectangleF (0f, 0f, size1.Width, size1.Height);
+
+			UIImageView imgv2 = new UIImageView (imgs[1]);
+			imgv2.Frame = new RectangleF (size1.Width, 0f, size2.Width, size2.Height);
+
+			UIImageView imgv3 = new UIImageView (imgs[2]);
+			imgv3.Frame = new RectangleF (size1.Width, size2.Height, size3.Width, size3.Height);
+
+			View.AddSubview(imgv1);
+			View.AddSubview(imgv2);
+			View.AddSubview(imgv3);
+
 		}
 
 		public override void ViewWillLayoutSubviews ()

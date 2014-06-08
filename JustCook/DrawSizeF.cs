@@ -5,20 +5,30 @@ using Logic;
 
 namespace JustCook
 {
-	public class DrawSizeF: ISizeF
+	public class DrawSizeF: IScalableSizeF
 	{
 		private SizeF _size;
 
 		public float Width
 		{
 			get { return _size.Width; }
-			set { _size.Width = value; }
+			set {
+				float ratio = value / _size.Width;
+
+				_size.Width = value;
+				_size.Height *= ratio;
+			}
 		}
 
 		public float Height
 		{
 			get { return _size.Height; }
-			set { _size.Height = value; }
+			set {
+				float ratio = value / _size.Height;
+
+				_size.Height = value;
+				_size.Width *= ratio;
+			}
 		}
 
 		public DrawSizeF(SizeF size)
@@ -26,7 +36,7 @@ namespace JustCook
 			_size = size;
 		}
 
-		public static SizeF Convert(ISizeF size)
+		public static SizeF Convert(IScalableSizeF size)
 		{
 			return new SizeF (size.Width, size.Height);
 		}

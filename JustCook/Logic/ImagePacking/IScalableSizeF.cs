@@ -2,7 +2,7 @@
 
 namespace Logic
 {
-	public interface ISizeF
+	public interface IScalableSizeF
 	{
 		float Width { get; set; }
 		float Height { get; set; }

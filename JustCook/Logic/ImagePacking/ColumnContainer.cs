@@ -11,7 +11,7 @@ namespace Logic
 		{
 			get
 			{
-				ThrowIfNotInitialized();
+				TryInitDefault();
 				return _width;
 			}
 			set
@@ -21,7 +21,7 @@ namespace Logic
 
 				for (int i = 0; i < Elements.Count; i++)
 				{
-					ISizeF size = Elements [i];
+					IScalableSizeF size = Elements [i];
 					float ratio = _width / size.Width;
 
 					size.Height *= ratio;
@@ -38,13 +38,12 @@ namespace Logic
 		{
 			get
 			{
-				ThrowIfNotInitialized();
+				TryInitDefault();
 				return _height;
 			}
 			set
 			{
-				if (!IsInitialized)
-					Width = 100;
+				TryInitDefault();
 
 				float ratio = value / _height;
 				_height = value;
@@ -53,6 +52,14 @@ namespace Logic
 				for (int i = 0; i < Elements.Count; i++)
 					Elements[i].Height *= ratio;
 			}
+		}
+
+		protected override void TryInitDefault ()
+		{
+			if (IsInitialized)
+				return;
+
+			Width = 100f;
 		}
 	}
 }

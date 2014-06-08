@@ -14,14 +14,12 @@ namespace Logic
 		{
 			get
 			{
-				ThrowIfNotInitialized();
+				TryInitDefault();
 				return _width;
 			}
 			set
 			{
-				// После того как все элементы одной высоты их можно просто отмасштабировать
-				if (!IsInitialized)
-					Height = 100f;
+				TryInitDefault();
 
 				float ratio = value / _width;
 				_width = value;
@@ -36,7 +34,7 @@ namespace Logic
 		{
 			get
 			{
-				ThrowIfNotInitialized();
+				TryInitDefault();
 				return _height;
 			}
 			set
@@ -47,7 +45,7 @@ namespace Logic
 				// scale here
 				for (int i = 0; i < Elements.Count; i++)
 				{
-					ISizeF size = Elements[i];
+					IScalableSizeF size = Elements[i];
 					float ratio = _height / size.Height;
 
 					size.Width *= ratio;
@@ -58,6 +56,14 @@ namespace Logic
 
 				IsInitialized = true;
 			}
+		}
+
+		protected override void TryInitDefault ()
+		{
+			if (IsInitialized)
+				return;
+
+			Height = 100f;
 		}
 	}
 }

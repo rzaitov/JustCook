@@ -4,7 +4,7 @@ namespace Logic
 {
 	public interface ISizeFactory
 	{
-		ISizeF Create(float width, float height);
+		IScalableSizeF Create(float width, float height);
 	}
 }
 
