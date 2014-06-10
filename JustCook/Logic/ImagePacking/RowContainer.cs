@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 
 namespace Logic
 {
 	/// <summary>
 	/// Основная задача RowContainer – выравнивание элементов по высоте
 	/// </summary>
-	public class RowContainer : ImageContainer
+	public class RowContainer : ImageContainer, IEnumerable
 	{
 		private float _width;
 		private float _height;
@@ -89,6 +90,11 @@ namespace Logic
 
 				IsInitialized = true;
 			}
+		}
+
+		public IEnumerator GetEnumerator()
+		{
+			throw new NotImplementedException();
 		}
 
 		protected override void TryInitDefault ()

@@ -39,8 +39,6 @@ namespace JustCook
 		{
 			_images.Clear();
 			List<UIImage> imgs = new List<UIImage> ();
-			RowContainer rc = new RowContainer();
-			ColumnContainer cc = new ColumnContainer ();
 
 			foreach (var path in ImgPaths())
 			{
@@ -80,15 +78,14 @@ namespace JustCook
 			*/
 
 			var box1 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[0].Size));
-			rc.Add(box1);
 			var box2 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[1].Size));
-			cc.Add(box2);
 			var box3 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[2].Size));
-			cc.Add(box3);
+			var box4 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[3].Size));
 
-			rc.Add(cc);
-//			rc.Height = 120;
-			rc.Width = 300f;
+			ImageContainer ic = new TwoItemsPerLineTwoLines(box1, box2, box3, box4);
+
+//			ic.Height = 250;
+			ic.Width = 300f;
 
 			UIImageView imgv1 = new UIImageView (imgs[0]);
 			imgv1.Frame = RectFWrapper.Convert(box1);
@@ -99,10 +96,14 @@ namespace JustCook
 			UIImageView imgv3 = new UIImageView (imgs[2]);
 			imgv3.Frame = RectFWrapper.Convert(box3);
 
+			UIImageView imgv4 = new UIImageView (imgs[3]);
+			imgv4.Frame = RectFWrapper.Convert(box4);
+
+
 			View.AddSubview(imgv1);
 			View.AddSubview(imgv2);
 			View.AddSubview(imgv3);
-
+			View.AddSubview(imgv4);
 		}
 
 		public override void ViewWillLayoutSubviews ()

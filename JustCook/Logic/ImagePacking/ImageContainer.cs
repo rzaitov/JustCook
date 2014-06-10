@@ -26,9 +26,9 @@ namespace Logic
 			_elements = new List<IScalableBox> ();
 		}
 
-		public void Add(IScalableBox size)
+		public virtual void Add(IScalableBox box)
 		{
-			_elements.Add(size);
+			_elements.Add(box);
 		}
 
 		protected abstract void TryInitDefault ();

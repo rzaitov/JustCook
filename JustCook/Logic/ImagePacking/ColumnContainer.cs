@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections;
 
 namespace Logic
 {
-	public class ColumnContainer : ImageContainer
+	public class ColumnContainer : ImageContainer, IEnumerable
 	{
 		private float _width;
 		private float _height;
@@ -85,6 +86,11 @@ namespace Logic
 					box.Height *= ratio;
 				}
 			}
+		}
+
+		public IEnumerator GetEnumerator()
+		{
+			throw new NotImplementedException();
 		}
 
 		protected override void TryInitDefault ()

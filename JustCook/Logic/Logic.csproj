@@ -45,6 +45,12 @@
     <Compile Include="ImagePacking\ColumnContainer.cs" />
     <Compile Include="ImagePacking\ISizeFactory.cs" />
     <Compile Include="ImagePacking\IScalableBox.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\FourInLine.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\FourInColumn.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\TwoInLineTwoInColumn.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\OneInLineThreeInColumn.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\TwoItemsPerLineTwoLines.cs" />
+    <Compile Include="ImagePacking\DefaultContainers\4Items\OneOneTwo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -77,5 +83,7 @@
     <Folder Include="VkModel\" />
     <Folder Include="VkRequest\" />
     <Folder Include="ImagePacking\" />
+    <Folder Include="ImagePacking\DefaultContainers\" />
+    <Folder Include="ImagePacking\DefaultContainers\4Items\" />
   </ItemGroup>
 </Project>
