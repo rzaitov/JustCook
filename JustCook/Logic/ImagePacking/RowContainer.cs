@@ -10,6 +10,33 @@ namespace Logic
 		private float _width;
 		private float _height;
 
+		private float _x;
+		public override float X
+		{
+			get { return _x; }
+			set
+			{
+				float dx = value - _x;
+				_x = value;
+
+				foreach (var box in Elements)
+					box.X += dx;
+			}
+		}
+
+		private float _y;
+		public override float Y
+		{
+			get { return _y; }
+			set
+			{
+				_y = value;
+
+				foreach (var box in Elements)
+					box.Y = _y;
+			}
+		}
+
 		public override float Width
 		{
 			get
@@ -26,7 +53,11 @@ namespace Logic
 				_height *= ratio;
 
 				for (int i = 0; i < Elements.Count; i++)
-					Elements[i].Width *= ratio;
+				{
+					var box = Elements[i];
+					box.X *= ratio;
+					box.Width *= ratio;
+				}
 			}
 		}
 
@@ -45,13 +76,15 @@ namespace Logic
 				// scale here
 				for (int i = 0; i < Elements.Count; i++)
 				{
-					IScalableBox size = Elements[i];
-					float ratio = _height / size.Height;
+					IScalableBox box = Elements[i];
+					float ratio = _height / box.Height;
 
-					size.Width *= ratio;
-					size.Height = _height;
+					box.X = _width;
+					box.Y = Y;
+					box.Width *= ratio;
+					box.Height = _height;
 
-					_width += size.Width;
+					_width += box.Width;
 				}
 
 				IsInitialized = true;

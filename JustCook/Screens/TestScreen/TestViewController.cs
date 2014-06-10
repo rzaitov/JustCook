@@ -79,25 +79,25 @@ namespace JustCook
 			_vScroll.ContentSize = new SizeF (cc.Width, cc.Height);
 			*/
 
-			var size1 = new RectFWrapper(imgs[0].Size);
-			rc.Add(size1);
-			var size2 = new RectFWrapper(imgs[1].Size);
-			cc.Add(size2);
-			var size3 = new RectFWrapper(imgs[2].Size);
-			cc.Add(size3);
+			var box1 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[0].Size));
+			rc.Add(box1);
+			var box2 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[1].Size));
+			cc.Add(box2);
+			var box3 = new RectFWrapper(new RectangleF(PointF.Empty, imgs[2].Size));
+			cc.Add(box3);
 
 			rc.Add(cc);
-			rc.Height = 120;
-//			rc.Width = 300f;
+//			rc.Height = 120;
+			rc.Width = 300f;
 
 			UIImageView imgv1 = new UIImageView (imgs[0]);
-			imgv1.Frame = new RectangleF (0f, 0f, size1.Width, size1.Height);
+			imgv1.Frame = RectFWrapper.Convert(box1);
 
 			UIImageView imgv2 = new UIImageView (imgs[1]);
-			imgv2.Frame = new RectangleF (size1.Width, 0f, size2.Width, size2.Height);
+			imgv2.Frame = RectFWrapper.Convert(box2);
 
 			UIImageView imgv3 = new UIImageView (imgs[2]);
-			imgv3.Frame = new RectangleF (size1.Width, size2.Height, size3.Width, size3.Height);
+			imgv3.Frame = RectFWrapper.Convert(box3);
 
 			View.AddSubview(imgv1);
 			View.AddSubview(imgv2);

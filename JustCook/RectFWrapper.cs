@@ -7,38 +7,50 @@ namespace JustCook
 {
 	public class RectFWrapper: IScalableBox
 	{
-		private SizeF _size;
+		private RectangleF _rect;
+
+		public float X
+		{
+			get { return _rect.X; }
+			set { _rect.X = value; }
+		}
+
+		public float Y
+		{
+			get { return _rect.Y; }
+			set { _rect.Y = value; }
+		}
 
 		public float Width
 		{
-			get { return _size.Width; }
+			get { return _rect.Width; }
 			set {
-				float ratio = value / _size.Width;
+				float ratio = value / _rect.Width;
 
-				_size.Width = value;
-				_size.Height *= ratio;
+				_rect.Width = value;
+				_rect.Height *= ratio;
 			}
 		}
 
 		public float Height
 		{
-			get { return _size.Height; }
+			get { return _rect.Height; }
 			set {
-				float ratio = value / _size.Height;
+				float ratio = value / _rect.Height;
 
-				_size.Height = value;
-				_size.Width *= ratio;
+				_rect.Height = value;
+				_rect.Width *= ratio;
 			}
 		}
 
-		public RectFWrapper(SizeF size)
+		public RectFWrapper(RectangleF rect)
 		{
-			_size = size;
+			_rect = rect;
 		}
 
-		public static SizeF Convert(IScalableBox size)
+		public static RectangleF Convert(IScalableBox box)
 		{
-			return new SizeF (size.Width, size.Height);
+			return new RectangleF (box.X, box.Y, box.Width, box.Height);
 		}
 	}
 }

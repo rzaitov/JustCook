@@ -7,6 +7,8 @@ namespace Logic
 	{
 		private readonly List<IScalableBox> _elements;
 
+		protected bool IsInitialized { get; set; }
+
 		public List<IScalableBox> Elements
 		{
 			get { return _elements;}
@@ -15,7 +17,9 @@ namespace Logic
 		public abstract float Width { get; set; }
 		public abstract float Height { get; set; }
 
-		protected bool IsInitialized { get; set; }
+		public abstract float X { get; set; }
+		public abstract float Y { get; set; }
+
 
 		public ImageContainer()
 		{
