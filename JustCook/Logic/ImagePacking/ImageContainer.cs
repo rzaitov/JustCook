@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Logic
 {
-	public abstract class ImageContainer : IScalableSizeF
+	public abstract class ImageContainer : IScalableBox
 	{
-		private readonly List<IScalableSizeF> _elements;
+		private readonly List<IScalableBox> _elements;
 
-		public List<IScalableSizeF> Elements
+		public List<IScalableBox> Elements
 		{
 			get { return _elements;}
 		}
@@ -19,10 +19,10 @@ namespace Logic
 
 		public ImageContainer()
 		{
-			_elements = new List<IScalableSizeF> ();
+			_elements = new List<IScalableBox> ();
 		}
 
-		public void Add(IScalableSizeF size)
+		public void Add(IScalableBox size)
 		{
 			_elements.Add(size);
 		}

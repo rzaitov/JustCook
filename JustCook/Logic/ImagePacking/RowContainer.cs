@@ -45,7 +45,7 @@ namespace Logic
 				// scale here
 				for (int i = 0; i < Elements.Count; i++)
 				{
-					IScalableSizeF size = Elements[i];
+					IScalableBox size = Elements[i];
 					float ratio = _height / size.Height;
 
 					size.Width *= ratio;

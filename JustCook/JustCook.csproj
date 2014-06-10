@@ -110,7 +110,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="VkDelegate.cs" />
     <Compile Include="Screens\TestScreen\TestViewController.cs" />
-    <Compile Include="DrawSizeF.cs" />
+    <Compile Include="RectFWrapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -79,11 +79,11 @@ namespace JustCook
 			_vScroll.ContentSize = new SizeF (cc.Width, cc.Height);
 			*/
 
-			var size1 = new DrawSizeF(imgs[0].Size);
+			var size1 = new RectFWrapper(imgs[0].Size);
 			rc.Add(size1);
-			var size2 = new DrawSizeF(imgs[1].Size);
+			var size2 = new RectFWrapper(imgs[1].Size);
 			cc.Add(size2);
-			var size3 = new DrawSizeF(imgs[2].Size);
+			var size3 = new RectFWrapper(imgs[2].Size);
 			cc.Add(size3);
 
 			rc.Add(cc);

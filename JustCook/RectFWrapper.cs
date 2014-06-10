@@ -5,7 +5,7 @@ using Logic;
 
 namespace JustCook
 {
-	public class DrawSizeF: IScalableSizeF
+	public class RectFWrapper: IScalableBox
 	{
 		private SizeF _size;
 
@@ -31,12 +31,12 @@ namespace JustCook
 			}
 		}
 
-		public DrawSizeF(SizeF size)
+		public RectFWrapper(SizeF size)
 		{
 			_size = size;
 		}
 
-		public static SizeF Convert(IScalableSizeF size)
+		public static SizeF Convert(IScalableBox size)
 		{
 			return new SizeF (size.Width, size.Height);
 		}
