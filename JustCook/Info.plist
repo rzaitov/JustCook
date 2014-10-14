@@ -39,5 +39,7 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 </dict>
 </plist>

@@ -12,15 +12,14 @@ namespace JustCook
 	[Register("AppDelegate")]
 	public partial class AppDelegate : UIApplicationDelegate
 	{
-		private UIWindow window;
 		private VkService _vkService;
 
 		private TestViewController _controller;
 
+		public override UIWindow Window { get; set; }
+
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
 			/*
 			_vkService = new VkService ();
 
@@ -36,10 +35,12 @@ namespace JustCook
 			});
 			*/
 
+			/*
 			_controller = new TestViewController ();
 			window.RootViewController = _controller;
 
 			window.MakeKeyAndVisible();
+			*/
 
 			return true;
 		}

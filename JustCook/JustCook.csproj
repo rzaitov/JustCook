@@ -113,6 +113,7 @@
     <Compile Include="RectFWrapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="Logic\Logic.csproj">
       <Project>{B7151238-C7FC-46DB-B900-ECEE9DC7D8F6}</Project>
@@ -123,5 +124,8 @@
     <Folder Include="Resources\TestImages\" />
     <Folder Include="Screens\" />
     <Folder Include="Screens\TestScreen\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
 </Project>
