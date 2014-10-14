@@ -111,6 +111,7 @@
     <Compile Include="VkDelegate.cs" />
     <Compile Include="Screens\TestScreen\TestViewController.cs" />
     <Compile Include="RectFWrapper.cs" />
+    <Compile Include="Screens\Recipe\RecipeView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
@@ -124,6 +125,7 @@
     <Folder Include="Resources\TestImages\" />
     <Folder Include="Screens\" />
     <Folder Include="Screens\TestScreen\" />
+    <Folder Include="Screens\Recipe\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
