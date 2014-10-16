@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
-        <!--Рецепт-->
+        <!--Recipe-->
         <scene sceneID="4">
             <objects>
                 <viewController title="Recipe" id="5" customClass="RecipeViewController" sceneMemberID="viewController">
@@ -29,11 +29,42 @@
                                                     <constraint firstAttribute="width" constant="50" id="6z0-xD-Idm"/>
                                                 </constraints>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="118">
+                                                <rect key="frame" x="295" y="5" width="20" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="125"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="JustCook" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="134">
+                                                <rect key="frame" x="60" y="5" width="230" height="26.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="today at  0:35" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="139">
+                                                <rect key="frame" x="60" y="31.5" width="230" height="13.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="118" firstAttribute="bottom" secondItem="69" secondAttribute="bottom" constant="-5" id="127"/>
+                                            <constraint firstAttribute="trailing" secondItem="118" secondAttribute="trailing" constant="5" id="128"/>
+                                            <constraint firstItem="118" firstAttribute="top" secondItem="69" secondAttribute="top" constant="5" id="129"/>
+                                            <constraint firstItem="134" firstAttribute="leading" secondItem="87" secondAttribute="trailing" constant="5" id="135"/>
+                                            <constraint firstItem="118" firstAttribute="leading" secondItem="134" secondAttribute="trailing" constant="5" id="136"/>
+                                            <constraint firstItem="134" firstAttribute="top" secondItem="69" secondAttribute="top" constant="5" id="137"/>
+                                            <constraint firstItem="134" firstAttribute="trailing" secondItem="139" secondAttribute="trailing" id="140"/>
+                                            <constraint firstItem="139" firstAttribute="leading" secondItem="134" secondAttribute="leading" id="141"/>
+                                            <constraint firstAttribute="bottom" secondItem="139" secondAttribute="bottom" id="143" constant="5"/>
+                                            <constraint firstItem="134" firstAttribute="bottom" secondItem="139" secondAttribute="top" constant="0.0" id="144"/>
                                             <constraint firstAttribute="height" constant="50" id="JYN-wo-kMC"/>
                                             <constraint firstItem="87" firstAttribute="top" secondItem="69" secondAttribute="top" constant="5" id="coz-M8-6O4"/>
+                                            <constraint firstItem="134" firstAttribute="height" secondItem="139" secondAttribute="height" id="pSm-s7-Es9" multiplier="2"/>
                                             <constraint firstAttribute="bottom" secondItem="87" secondAttribute="bottom" constant="5" id="wEl-7f-fSk"/>
                                             <constraint firstItem="87" firstAttribute="leading" secondItem="69" secondAttribute="leading" constant="5" id="x7p-2c-Hyn"/>
                                         </constraints>
@@ -65,6 +96,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recipe" id="42"/>
+                    <connections>
+                        <outlet property="GroupTitle" destination="134" id="name-outlet-134"/>
+                        <outlet property="Time" destination="139" id="name-outlet-139"/>
+                        <outlet property="Bookmark" destination="118" id="name-outlet-118"/>
+                        <outlet property="Avatar" destination="87" id="name-outlet-87"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
