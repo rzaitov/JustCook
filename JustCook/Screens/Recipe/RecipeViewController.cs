@@ -10,7 +10,6 @@ namespace JustCook
 		public RecipeViewController(IntPtr handle)
 			: base(handle)
 		{
-			Title = "Recipe";
 		}
 	}
 }
