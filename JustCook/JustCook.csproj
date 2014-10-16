@@ -113,6 +113,7 @@
     <Compile Include="RectFWrapper.cs" />
     <Compile Include="Screens\Recipe\RecipeView.cs" />
     <Compile Include="Screens\Recipe\RecipeHeaderView.cs" />
+    <Compile Include="Screens\Recipe\RecipeViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
