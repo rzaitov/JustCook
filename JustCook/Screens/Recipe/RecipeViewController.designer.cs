@@ -28,6 +28,18 @@ namespace JustCook
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIView ImageContainer { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton LikesBtn { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel Text { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel Time { get; set; }
 
 		void ReleaseDesignerOutlets ()
@@ -43,6 +55,18 @@ namespace JustCook
 			if (GroupTitle != null) {
 				GroupTitle.Dispose ();
 				GroupTitle = null;
+			}
+			if (ImageContainer != null) {
+				ImageContainer.Dispose ();
+				ImageContainer = null;
+			}
+			if (LikesBtn != null) {
+				LikesBtn.Dispose ();
+				LikesBtn = null;
+			}
+			if (Text != null) {
+				Text.Dispose ();
+				Text = null;
 			}
 			if (Time != null) {
 				Time.Dispose ();

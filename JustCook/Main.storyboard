@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="28">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Recipe-->
@@ -36,14 +37,14 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="JustCook" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="134">
-                                                <rect key="frame" x="60" y="5" width="230" height="26.5"/>
+                                                <rect key="frame" x="60" y="5" width="230" height="27"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="today at  0:35" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="139">
-                                                <rect key="frame" x="60" y="31.5" width="230" height="13.5"/>
+                                                <rect key="frame" x="60" y="32" width="230" height="13"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,17 +61,30 @@
                                             <constraint firstItem="134" firstAttribute="top" secondItem="69" secondAttribute="top" constant="5" id="137"/>
                                             <constraint firstItem="134" firstAttribute="trailing" secondItem="139" secondAttribute="trailing" id="140"/>
                                             <constraint firstItem="139" firstAttribute="leading" secondItem="134" secondAttribute="leading" id="141"/>
-                                            <constraint firstAttribute="bottom" secondItem="139" secondAttribute="bottom" id="143" constant="5"/>
-                                            <constraint firstItem="134" firstAttribute="bottom" secondItem="139" secondAttribute="top" constant="0.0" id="144"/>
+                                            <constraint firstAttribute="bottom" secondItem="139" secondAttribute="bottom" constant="5" id="143"/>
+                                            <constraint firstItem="134" firstAttribute="bottom" secondItem="139" secondAttribute="top" id="144"/>
                                             <constraint firstAttribute="height" constant="50" id="JYN-wo-kMC"/>
                                             <constraint firstItem="87" firstAttribute="top" secondItem="69" secondAttribute="top" constant="5" id="coz-M8-6O4"/>
-                                            <constraint firstItem="134" firstAttribute="height" secondItem="139" secondAttribute="height" id="pSm-s7-Es9" multiplier="2"/>
+                                            <constraint firstItem="134" firstAttribute="height" secondItem="139" secondAttribute="height" multiplier="2" id="pSm-s7-Es9"/>
                                             <constraint firstAttribute="bottom" secondItem="87" secondAttribute="bottom" constant="5" id="wEl-7f-fSk"/>
                                             <constraint firstItem="87" firstAttribute="leading" secondItem="69" secondAttribute="leading" constant="5" id="x7p-2c-Hyn"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hello World" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="111" misplaced="YES">
-                                        <rect key="frame" x="116" y="241" width="89" height="21"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="149">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="150"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="154"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="155">
+                                        <rect key="frame" x="254" y="469" width="61" height="30"/>
+                                        <state key="normal" title="500 likes">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="158">
+                                        <rect key="frame" x="0.0" y="200" width="320" height="269"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,10 +93,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="111" firstAttribute="centerX" secondItem="45" secondAttribute="centerX" id="112"/>
+                                    <constraint firstItem="149" firstAttribute="top" secondItem="69" secondAttribute="bottom" id="150"/>
+                                    <constraint firstItem="149" firstAttribute="leading" secondItem="45" secondAttribute="leading" id="151"/>
+                                    <constraint firstAttribute="trailing" secondItem="149" secondAttribute="trailing" id="152"/>
+                                    <constraint firstAttribute="trailing" secondItem="155" secondAttribute="trailing" constant="5" id="156"/>
+                                    <constraint firstAttribute="bottom" secondItem="155" secondAttribute="bottom" constant="5" id="157"/>
+                                    <constraint firstItem="158" firstAttribute="top" secondItem="149" secondAttribute="bottom" id="159"/>
+                                    <constraint firstItem="158" firstAttribute="leading" secondItem="45" secondAttribute="leading" id="160"/>
+                                    <constraint firstAttribute="trailing" secondItem="158" secondAttribute="trailing" id="161"/>
+                                    <constraint firstItem="155" firstAttribute="top" secondItem="158" secondAttribute="bottom" id="162"/>
                                     <constraint firstItem="69" firstAttribute="leading" secondItem="45" secondAttribute="leading" id="MtR-cj-Uah"/>
                                     <constraint firstItem="69" firstAttribute="top" secondItem="45" secondAttribute="top" id="V51-d1-jkb"/>
-                                    <constraint firstAttribute="centerY" secondItem="111" secondAttribute="centerY" id="bnk-2k-vph"/>
                                     <constraint firstAttribute="trailing" secondItem="69" secondAttribute="trailing" id="zkd-dv-bzY"/>
                                 </constraints>
                             </view>
@@ -97,10 +118,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Recipe" id="42"/>
                     <connections>
-                        <outlet property="GroupTitle" destination="134" id="name-outlet-134"/>
-                        <outlet property="Time" destination="139" id="name-outlet-139"/>
-                        <outlet property="Bookmark" destination="118" id="name-outlet-118"/>
                         <outlet property="Avatar" destination="87" id="name-outlet-87"/>
+                        <outlet property="Bookmark" destination="118" id="name-outlet-118"/>
+                        <outlet property="GroupTitle" destination="134" id="name-outlet-134"/>
+                        <outlet property="ImageContainer" destination="149" id="name-outlet-149"/>
+                        <outlet property="LikesBtn" destination="155" id="name-outlet-155"/>
+                        <outlet property="Text" destination="158" id="name-outlet-158"/>
+                        <outlet property="Time" destination="139" id="name-outlet-139"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,14 +152,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <resources>
-        <image name="Default-568h.png" width="640" height="1136"/>
-        <image name="TestImages/7TzTt64uC5I.jpg" width="130" height="97"/>
-        <image name="TestImages/8kRuiq5bjfM.jpg" width="130" height="111"/>
-        <image name="TestImages/Co1Z6PbkZ40.jpg" width="130" height="97"/>
-        <image name="TestImages/KXX3VUnNsq8.jpg" width="130" height="97"/>
-        <image name="TestImages/V-DjgYm2dm0.jpg" width="130" height="87"/>
-        <image name="TestImages/_7E5pLvSWQc.jpg" width="130" height="97"/>
-        <image name="TestImages/m-mfbOYoMao.jpg" width="130" height="85"/>
-    </resources>
 </document>
